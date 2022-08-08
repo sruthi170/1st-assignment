@@ -1,0 +1,28 @@
+1./* read a number and print if it is fancy or not */
+
+#include<stdio.h>
+main()
+{
+	int r,n,ecount=0,ocount=0;
+	printf("Enter number n:");
+	scanf("%d",&n);
+	while(n>0)
+	{
+		r=n%10;
+		if(r%2==0)
+		ecount=ecount+1;
+		else
+		ocount=ocount+1;
+		n=n/10;
+	}
+	if(ecount==ocount)
+	printf("Fancy Number");
+	else
+	printf("Not Fancy Number");
+}
+
+o/p:Enter number n:123456
+Fancy Number
+
+Enter number n:12345
+Not Fancy Number
